@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tweet Tags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tweet</th>
+      <th>Tag</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tweet_tags.each do |tweet_tag| %>
+      <tr>
+        <td><%= tweet_tag.tweet_id %></td>
+        <td><%= tweet_tag.tag_id %></td>
+        <td><%= link_to 'Show', tweet_tag %></td>
+        <td><%= link_to 'Edit', edit_tweet_tag_path(tweet_tag) %></td>
+        <td><%= link_to 'Destroy', tweet_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tweet Tag', new_tweet_tag_path %>

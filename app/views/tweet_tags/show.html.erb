@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tweet:</strong>
+  <%= @tweet_tag.tweet_id %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @tweet_tag.tag_id %>
+</p>
+
+<%= link_to 'Edit', edit_tweet_tag_path(@tweet_tag) %> |
+<%= link_to 'Back', tweet_tags_path %>
