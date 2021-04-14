@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   get '/tweets/hashtag/:name', to:'tweets#hashtags'
 
   devise_for :users, controllers: {registrations: 'users/registrations'}
-  root to: "tweets#index"
+  root to: "home#index"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
