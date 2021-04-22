@@ -29,7 +29,7 @@
           <% if tweet.origin_tweet.nil? %>
             <h3><%= tweet.content %></h3>
           <% else %>
-            <%= image_tag(tweet.origin_tweet.user.profile_picture, width: "20%") %> <%= tweet.origin_tweet.user.user_name %> dice: 
+            <%#= image_tag(tweet.origin_tweet.user.profile_picture, width: "20%") %> <%#= tweet.origin_tweet.user.user_name %> dice: 
             <div class="container mx-auto">
               <%= tweet.content %>
             </div>
@@ -51,5 +51,6 @@
 </div>
 
 <br>
-  <%= will_paginate @paginated_tweets, :previous_label => '', :next_label => 'Mostrar más tweets' %>
+  <%#= will_paginate @paginated_tweets, :previous_label => '', :next_label => 'Mostrar más tweets' %>
 <br>
+

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :apis
+  #resources :apis
 
+  get 'apis/news', to: 'apis#index'
+  get 'apis/:fecha1/:fecha2', to: 'apis#show'
+  post 'apis/tweets', to: 'apis#create'
+  
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -12,6 +16,6 @@ Rails.application.routes.draw do
   get '/tweets/hashtag/:name', to:'tweets#hashtags'
 
   devise_for :users, controllers: {registrations: 'users/registrations'}
-  root to: "home#index"
+  root to: "tweets#index"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
